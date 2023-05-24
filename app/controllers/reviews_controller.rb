@@ -14,7 +14,8 @@ class ReviewsController < ApplicationController
     @restaurant = Restaurant.find(params[:restaurant_id])
     @review.restaurant = @restaurant
     # if @review.save
-      redirect_to restaurant_reviews_path
+    @review.save
+    redirect_to restaurant_reviews_path
     # else
     #   render :new, status: :unprocessable_entity
     # end
