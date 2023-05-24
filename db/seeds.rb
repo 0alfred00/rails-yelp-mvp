@@ -7,12 +7,24 @@
 #   Character.create(name: "Luke", movie: movies.first)
 # db/seeds.rb
 require 'faker'
-categories = ["chinese", "italian", "japanese", "french", "belgian"]
+# categories = ["chinese", "italian", "japanese", "french", "belgian"]
 
-5.times do
-  Restaurant.create!(
-    name: Faker::Restaurant.name,
-    address: Faker::Address.full_address,
-    category: categories.sample
-  )
+# 5.times do
+#   Restaurant.create!(
+#     name: Faker::Restaurant.name,
+#     address: Faker::Address.full_address,
+#     category: categories.sample
+#   )
+# end
+
+restaurants = Restaurant.all
+
+restaurants.each do |restaurant|
+  5.times do
+    Review.create(
+      rating: rand(1..5),
+      content: Faker::Restaurant.review,
+      restaurant_id: restaurant.id
+    )
+  end
 end

@@ -1,0 +1,13 @@
+<div class="container">
+  <h1 class="display-4">Create new review</h1>
+  <br>
+  <%= form_with model: @review, url: restaurant_reviews_path(@restaurant) do |f| %>
+    <%= f.label :content %>
+    <%= f.text_field :content %>
+    <%= f.label :rating %>
+    <%= f.select :rating, [1, 2, 3, 4, 5] %>
+    <%= f.submit %>
+  <% end %>
+  <br>
+  <%= link_to "Cancel", restaurant_reviews_path, class: "btn btn-primary"%>
+</div>
