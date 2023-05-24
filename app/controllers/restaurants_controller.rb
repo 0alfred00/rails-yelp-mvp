@@ -17,21 +17,21 @@ class RestaurantsController < ApplicationController
     redirect_to restaurants_path
   end
 
-  def edit
-    @restaurant = Restaurant.find(params[:id])
-  end
+  # def edit
+  #   @restaurant = Restaurant.find(params[:id])
+  # end
 
-  def update
-    @restaurant = Restaurant.find(params[:id])
-    @restaurant.update(restaurant_params)
-    redirect_to restaurants_path
-  end
+  # def update
+  #   @restaurant = Restaurant.find(params[:id])
+  #   @restaurant.update(restaurant_params)
+  #   redirect_to restaurants_path
+  # end
 
-  def destroy
-    @restaurant = Restaurant.find(params[:id])
-    @restaurant.destroy
-    redirect_to restaurants_path, status: :see_other
-  end
+  # def destroy
+  #   @restaurant = Restaurant.find(params[:id])
+  #   @restaurant.destroy
+  #   redirect_to restaurants_path, status: :see_other
+  # end
 
   private
 

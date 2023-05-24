@@ -6,12 +6,14 @@
   <br>
   <br>
   <%= link_to "Edit restaurant", edit_restaurant_path(@restaurant), class: "btn btn-secondary" %>
+  <p>(removed)</p>
   <br>
   <br>
   <%= link_to "Delete",
   restaurant_path(@restaurant),
   data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},
   class: "btn btn-danger"%>
+    <p>(removed)</p>
   <br>
   <br>
   <%= link_to "Back to restaurant overview", restaurants_path, class: "btn btn-primary"%>
